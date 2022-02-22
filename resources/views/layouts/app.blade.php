@@ -52,6 +52,18 @@
                                 </li>
                             @endif
                         @else
+                            @can('user-list')
+                                <li><a class="nav-link" href="{{ route('users.index') }}">Users</a></li>
+                            @endcan
+                            @can('role-list')
+                                <li><a class="nav-link" href="{{ route('roles.index') }}">Roles</a></li>
+                            @endcan
+                            @can('permission-list')
+                                <li><a class="nav-link" href="{{ route('permissions.index') }}">Permission</a></li>
+                            @endcan
+                            @can('post-list')
+                                <li><a class="nav-link" href="{{ route('posts.index') }}">Posts</a></li>
+                            @endcan                        
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
