@@ -1,848 +1,1044 @@
 @extends('layouts.admin')
 
 @section('content')
-<main>
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <div class="page-title-container">
-        <h1 class="mb-0 pb-0 display-4" id="title">{{ __('Tableau de bord') }}</h1>
-        <nav class="breadcrumb-container d-inline-block" aria-label="breadcrumb">
-          <ul class="breadcrumb pt-0">
-            <li class="breadcrumb-item"><a href="Dashboards.Default.html">Home</a></li>
-            <li class="breadcrumb-item"><a href="Dashboards.html">Dashboards</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </div>
+<div class="page-content">
+    <div class="container-fluid">
 
-  <div class="row">
-    <div class="col-12 col-lg-8">
-      <!-- Inventory Start -->
-      <h2 class="small-title">Inventory</h2>
-      <div class="mb-5">
-        <div class="row g-2">
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card hover-scale-up cursor-pointer sh-19">
-              <div class="h-100 d-flex flex-column justify-content-between card-body align-items-center">
-                <div class="bg-gradient-2 sh-5 sw-5 rounded-xl d-flex justify-content-center align-items-center mb-2">
-                  <i data-cs-icon="radish" class="text-white"></i>
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-flex align-items-center justify-content-between">
+                    <h4 class="mb-0">{{ __('Tableaux de bord') }}</h4>
+
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Nazox</a></li>
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+                    </div>
+
                 </div>
-                <div class="heading text-center mb-0 d-flex align-items-center lh-1">Radish</div>
-                <div class="text-small text-primary">14 PRODUCTS</div>
-              </div>
             </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card hover-scale-up cursor-pointer sh-19">
-              <div class="h-100 d-flex flex-column justify-content-between card-body align-items-center">
-                <div class="bg-gradient-2 sh-5 sw-5 rounded-xl d-flex justify-content-center align-items-center mb-2">
-                  <i data-cs-icon="mushrooms" class="text-white"></i>
-                </div>
-                <div class="heading text-center mb-0 d-flex align-items-center lh-1">Mushroom</div>
-                <div class="text-small text-primary">8 PRODUCTS</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card hover-scale-up cursor-pointer sh-19">
-              <div class="h-100 d-flex flex-column justify-content-between card-body align-items-center">
-                <div class="bg-gradient-2 sh-5 sw-5 rounded-xl d-flex justify-content-center align-items-center mb-2">
-                  <i data-cs-icon="pepper" class="text-white"></i>
-                </div>
-                <div class="heading text-center mb-0 d-flex align-items-center lh-1">Pepper</div>
-                <div class="text-small text-primary">21 PRODUCTS</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card hover-scale-up cursor-pointer sh-19">
-              <div class="h-100 d-flex flex-column justify-content-between card-body align-items-center">
-                <div class="sh-5 sw-5 border border-dashed rounded-xl mx-auto">
-                  <div class="bg-separator w-100 h-100 rounded-xl d-flex justify-content-center align-items-center mb-2">
-                    <i data-cs-icon="plus" class="text-white"></i>
-                  </div>
-                </div>
-                <div class="heading text-center text-muted mb-0 d-flex align-items-center lh-1">Add New</div>
-                <div class="text-small text-primary">&nbsp;</div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <!-- Inventory End -->
+        <!-- end page title -->
 
-      <!-- Products Start -->
-      <div class="d-flex justify-content-between">
-        <h2 class="small-title">Stocks</h2>
-        <button class="btn btn-icon btn-icon-end btn-xs btn-background-alternate p-0 text-small" type="button">
-          <span class="align-bottom">View All</span>
-          <i data-cs-icon="chevron-right" class="align-middle" data-cs-size="12"></i>
-        </button>
-      </div>
-      <div class="scroll-out mb-5">
-        <div class="scroll-by-count mb-n2" data-count="5">
-          <div class="card mb-2">
-            <div class="row g-0 sh-14 sh-md-10">
-              <div class="col-auto h-100">
-                <a href="Pages.Portfolio.Detail.html">
-                  <img src="img/product/small/baguette.jpg" alt="user" class="card-img card-img-horizontal sw-13 sw-md-12" />
-                </a>
-              </div>
-              <div class="col">
-                <div class="card-body pt-0 pb-0 h-100">
-                  <div class="row g-0 h-100 align-content-center">
-                    <div class="col-12 col-md-6 d-flex align-items-center mb-2 mb-md-0">
-                      <a href="Pages.Portfolio.Detail.html">Barmbrack</a>
-                    </div>
-                    <div class="col-12 col-md-3 d-flex align-items-center text-muted text-medium">Whole Wheat</div>
-                    <div class="col-12 col-md-3 d-flex align-items-center justify-content-md-end text-muted text-medium">1.543 Sales</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="card mb-2">
-            <div class="row g-0 sh-14 sh-md-10">
-              <div class="col-auto h-100">
-                <a href="Pages.Portfolio.Detail.html">
-                  <img src="img/product/small/barmbrack.jpg" alt="user" class="card-img card-img-horizontal sw-13 sw-md-12" />
-                </a>
-              </div>
-              <div class="col">
-                <div class="card-body pt-0 pb-0 h-100">
-                  <div class="row g-0 h-100 align-content-center">
-                    <div class="col-12 col-md-6 d-flex align-items-center mb-2 mb-md-0">
-                      <a href="Pages.Portfolio.Detail.html">Cheesymite Scroll</a>
-                    </div>
-                    <div class="col-12 col-md-3 d-flex align-items-center text-muted text-medium">Whole Wheat</div>
-                    <div class="col-12 col-md-3 d-flex align-items-center justify-content-md-end text-muted text-medium">2.701 Sales</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="row">
+            <div class="col-xl-8">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="media">
+                                    <div class="media-body overflow-hidden">
+                                        <p class="text-truncate font-size-14 mb-2">Number of Sales</p>
+                                        <h4 class="mb-0">1452</h4>
+                                    </div>
+                                    <div class="text-primary">
+                                        <i class="ri-stack-line font-size-24"></i>
+                                    </div>
+                                </div>
+                            </div>
 
-          <div class="card mb-2">
-            <div class="row g-0 sh-14 sh-md-10">
-              <div class="col-auto h-100">
-                <a href="Pages.Portfolio.Detail.html">
-                  <img src="img/product/small/panettone.jpg" alt="user" class="card-img card-img-horizontal sw-13 sw-md-12" />
-                </a>
-              </div>
-              <div class="col">
-                <div class="card-body pt-0 pb-0 h-100">
-                  <div class="row g-0 h-100 align-content-center">
-                    <div class="col-12 col-md-6 d-flex align-items-center mb-2 mb-md-0">
-                      <a href="Pages.Portfolio.Detail.html">Cholermüs</a>
-                    </div>
-                    <div class="col-12 col-md-3 d-flex align-items-center text-muted text-medium">Multigrain</div>
-                    <div class="col-12 col-md-3 d-flex align-items-center justify-content-md-end text-muted text-medium">4.024 Sales</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card mb-2">
-            <div class="row g-0 sh-14 sh-md-10">
-              <div class="col-auto h-100">
-                <a href="Pages.Portfolio.Detail.html">
-                  <img src="img/product/small/bread-square.jpg" alt="user" class="card-img card-img-horizontal h-100 sw-13 sw-md-12" />
-                </a>
-              </div>
-              <div class="col">
-                <div class="card-body pt-0 pb-0 h-100">
-                  <div class="row g-0 h-100 align-content-center">
-                    <div class="col-12 col-md-6 d-flex align-items-center mb-2 mb-md-0">
-                      <a href="Pages.Portfolio.Detail.html">Ruisreikäleipä</a>
-                    </div>
-                    <div class="col-12 col-md-3 d-flex align-items-center text-muted text-medium">Sourdough</div>
-                    <div class="col-12 col-md-3 d-flex align-items-center justify-content-md-end text-muted text-medium">1.972 Sales</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card mb-2">
-            <div class="row g-0 sh-14 sh-md-10">
-              <div class="col-auto h-100">
-                <a href="Pages.Portfolio.Detail.html">
-                  <img src="img/product/small/sandwich-bread.jpg" alt="user" class="card-img card-img-horizontal sw-13 sw-md-12" />
-                </a>
-              </div>
-              <div class="col">
-                <div class="card-body pt-0 pb-0 h-100">
-                  <div class="row g-0 h-100 align-content-center">
-                    <div class="col-12 col-md-6 d-flex align-items-center mb-2 mb-md-0">
-                      <a href="Pages.Portfolio.Detail.html">Buccellato di Lucca</a>
-                    </div>
-                    <div class="col-12 col-md-3 d-flex align-items-center text-muted text-medium">Whole Wheat</div>
-                    <div class="col-12 col-md-3 d-flex align-items-center justify-content-md-end text-muted text-medium">1.352 Sales</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Products End -->
-    </div>
-    <div class="col-12 col-lg-4">
-      <!-- Today's Orders Start -->
-      <h2 class="small-title">Today's Orders</h2>
-      <div class="card w-100 sh-50 mb-5">
-        <img src="img/banner/cta-square-4.jpg" class="card-img h-100" alt="card image" />
-        <div class="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
-          <div class="d-flex flex-column h-100 justify-content-between align-items-start">
-            <div>
-              <div class="cta-1 text-primary mb-1">124</div>
-              <div class="lh-1-25 mb-0">Received Orders</div>
-            </div>
-            <div>
-              <div class="cta-1 text-primary mb-1">64</div>
-              <div class="lh-1-25 mb-0">Completed Orders</div>
-            </div>
-            <div>
-              <div class="cta-1 text-primary mb-1">34</div>
-              <div class="lh-1-25 mb-0">Pending Orders</div>
-            </div>
-            <div>
-              <div class="cta-1 text-primary mb-1">23</div>
-              <div class="lh-1-25 mb-0">Shipped Orders</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Today's Orders End -->
-
-      <!-- Categories Start -->
-      <h2 class="small-title">Categories</h2>
-      <div class="card mb-5 h-auto sh-lg-23">
-        <div class="card-body h-100">
-          <div class="row g-0 h-100">
-            <div class="col-12 col-sm-6 h-100 d-flex justify-content-between flex-column">
-              <a href="#" class="body-link d-flex mb-2">Whole Wheat (2)</a>
-              <a href="#" class="body-link d-flex mb-2">Brown (6)</a>
-              <a href="#" class="body-link d-flex mb-2">White (4)</a>
-              <a href="#" class="body-link d-flex mb-2">Vegetable (2)</a>
-            </div>
-            <div class="col-12 col-sm-6 h-100 d-flex justify-content-between flex-column">
-              <a href="#" class="body-link d-flex mb-2">Diet (2)</a>
-              <a href="#" class="body-link d-flex mb-2">Rye (6)</a>
-              <a href="#" class="body-link d-flex mb-2">Sourdough (3)</a>
-              <a href="#" class="body-link d-flex mb-2">Multigrain (4)</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Categories End -->
-    </div>
-  </div>
-
-  <!-- Banners Start -->
-  <h2 class="small-title">Extend Your Knowledge</h2>
-  <div class="row g-2 mb-5">
-    <div class="col-12 col-sm-6 col-xl-3">
-      <div class="card w-100 sh-23 hover-img-scale-up">
-        <img src="img/banner/cta-vertical-1.jpg" class="card-img h-100 scale" alt="card image" />
-        <div class="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
-          <div class="d-flex flex-column h-100 justify-content-between align-items-start">
-            <div class="cta-2 text-black w-75">Introduction to Bread Making</div>
-            <a href="Pages.Blog.List.html" class="btn btn-icon btn-icon-start btn-primary mt-3 stretched-link">
-              <i data-cs-icon="chevron-right" class="text-white"></i>
-              <span>View</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-xl-3">
-      <div class="card w-100 sh-23 hover-img-scale-up">
-        <img src="img/banner/cta-vertical-2.jpg" class="card-img h-100 scale" alt="card image" />
-        <div class="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
-          <div class="d-flex flex-column h-100 justify-content-between align-items-start">
-            <div class="cta-2 text-black w-75">Basic Principles of Cooking</div>
-            <a href="Pages.Blog.List.html" class="btn btn-icon btn-icon-start btn-primary mt-3 stretched-link">
-              <i data-cs-icon="chevron-right" class="text-white"></i>
-              <span>View</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-xl-3">
-      <div class="card w-100 sh-23 hover-img-scale-up">
-        <img src="img/banner/cta-vertical-3.jpg" class="card-img h-100 scale" alt="card image" />
-        <div class="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
-          <div class="d-flex flex-column h-100 justify-content-between align-items-start">
-            <div class="cta-2 text-black w-75">Easy & Practical Recipes</div>
-            <a href="Pages.Blog.List.html" class="btn btn-icon btn-icon-start btn-primary mt-3 stretched-link">
-              <i data-cs-icon="chevron-right" class="text-white"></i>
-              <span>View</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12 col-sm-6 col-xl-3">
-      <div class="card w-100 sh-23 hover-img-scale-up">
-        <img src="img/banner/cta-vertical-4.jpg" class="card-img h-100 scale" alt="card image" />
-        <div class="card-img-overlay d-flex flex-column justify-content-between bg-transparent">
-          <div class="d-flex flex-column h-100 justify-content-between align-items-start">
-            <div class="cta-2 text-black w-75">Introduction to Bread Making</div>
-            <a href="Pages.Blog.List.html" class="btn btn-icon btn-icon-start btn-primary mt-3 stretched-link">
-              <i data-cs-icon="chevron-right" class="text-white"></i>
-              <span>View</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Banners End -->
-
-  <div class="row">
-    <!-- Latest Registrations Start -->
-    <div class="col-12 col-xl-6 mb-5">
-      <h2 class="small-title">Latest Registrations</h2>
-      <div class="card h-100-card">
-        <div class="card-body">
-          <div class="scroll-out">
-            <div class="scroll-by-count mb-n2" data-childSelector=".scroll-item" data-count="5">
-              <div class="mb-2 scroll-item">
-                <div class="row g-0 sh-10 sh-sm-7">
-                  <div class="col-auto">
-                    <img src="img/profile/profile-6.jpg" class="card-img rounded-xl sh-6 sw-6" alt="thumb" />
-                  </div>
-                  <div class="col">
-                    <div class="card-body d-flex flex-column flex-sm-row pt-0 pb-0 ps-3 pe-0 h-100 align-items-sm-center justify-content-sm-between">
-                      <div class="d-flex flex-column mb-2 mb-sm-0">
-                        <div>Joisse Kaycee</div>
-                        <div class="text-small text-muted">UX Designer</div>
-                      </div>
-                      <div class="d-flex">
-                        <button class="btn btn-outline-secondary btn-sm" type="button">Edit</button>
-                        <button class="btn btn-sm btn-icon btn-icon-only btn-outline-secondary ms-1" type="button">
-                          <i data-cs-icon="more-vertical"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-2 scroll-item">
-                <div class="row g-0 sh-10 sh-sm-7">
-                  <div class="col-auto">
-                    <img src="img/profile/profile-7.jpg" class="card-img rounded-xl sh-6 sw-6" alt="thumb" />
-                  </div>
-                  <div class="col">
-                    <div class="card-body d-flex flex-column flex-sm-row pt-0 pb-0 ps-3 pe-0 h-100 align-items-sm-center justify-content-sm-between">
-                      <div class="d-flex flex-column mb-2 mb-sm-0">
-                        <div>Zayn Hartley</div>
-                        <div class="text-small text-muted">Frontend Developer</div>
-                      </div>
-                      <div class="d-flex">
-                        <button class="btn btn-outline-secondary btn-sm" type="button">Edit</button>
-                        <button class="btn btn-sm btn-icon btn-icon-only btn-outline-secondary ms-1" type="button">
-                          <i data-cs-icon="more-vertical"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-2 scroll-item">
-                <div class="row g-0 sh-10 sh-sm-7">
-                  <div class="col-auto">
-                    <img src="img/profile/profile-8.jpg" class="card-img rounded-xl sh-6 sw-6" alt="thumb" />
-                  </div>
-                  <div class="col">
-                    <div class="card-body d-flex flex-column flex-sm-row pt-0 pb-0 ps-3 pe-0 h-100 align-items-sm-center justify-content-sm-between">
-                      <div class="d-flex flex-column mb-2 mb-sm-0">
-                        <div>Esperanza Lodge</div>
-                        <div class="text-small text-muted">Project Manager</div>
-                      </div>
-                      <div class="d-flex">
-                        <button class="btn btn-outline-secondary btn-sm" type="button">Edit</button>
-                        <button class="btn btn-sm btn-icon btn-icon-only btn-outline-secondary ms-1" type="button">
-                          <i data-cs-icon="more-vertical"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-2 scroll-item">
-                <div class="row g-0 sh-10 sh-sm-7">
-                  <div class="col-auto">
-                    <img src="img/profile/profile-2.jpg" class="card-img rounded-xl sh-6 sw-6" alt="thumb" />
-                  </div>
-                  <div class="col">
-                    <div class="card-body d-flex flex-column flex-sm-row pt-0 pb-0 ps-3 pe-0 h-100 align-items-sm-center justify-content-sm-between">
-                      <div class="d-flex flex-column mb-2 mb-sm-0">
-                        <div>Kathryn Mengel</div>
-                        <div class="text-small text-muted">Executive Team Leader</div>
-                      </div>
-                      <div class="d-flex">
-                        <button class="btn btn-outline-secondary btn-sm" type="button">Edit</button>
-                        <button class="btn btn-sm btn-icon btn-icon-only btn-outline-secondary ms-1" type="button">
-                          <i data-cs-icon="more-vertical"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-2 scroll-item">
-                <div class="row g-0 sh-10 sh-sm-7">
-                  <div class="col-auto">
-                    <img src="img/profile/profile-5.jpg" class="card-img rounded-xl sh-6 sw-6" alt="thumb" />
-                  </div>
-                  <div class="col">
-                    <div class="card-body d-flex flex-column flex-sm-row pt-0 pb-0 ps-3 pe-0 h-100 align-items-sm-center justify-content-sm-between">
-                      <div class="d-flex flex-column mb-2 mb-sm-0">
-                        <div>Blaine Cottrell</div>
-                        <div class="text-small text-muted">Accounting</div>
-                      </div>
-                      <div class="d-flex">
-                        <button class="btn btn-outline-secondary btn-sm" type="button">Edit</button>
-                        <button class="btn btn-sm btn-icon btn-icon-only btn-outline-secondary ms-1" type="button">
-                          <i data-cs-icon="more-vertical"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-2 scroll-item">
-                <div class="row g-0 sh-10 sh-sm-7">
-                  <div class="col-auto">
-                    <img src="img/profile/profile-8.jpg" class="card-img rounded-xl sh-6 sw-6" alt="thumb" />
-                  </div>
-                  <div class="col">
-                    <div class="card-body d-flex flex-column flex-sm-row pt-0 pb-0 ps-3 pe-0 h-100 align-items-sm-center justify-content-sm-between">
-                      <div class="d-flex flex-column mb-2 mb-sm-0">
-                        <div>Cherish Kerr</div>
-                        <div class="text-small text-muted">Development Lead</div>
-                      </div>
-                      <div class="d-flex">
-                        <button class="btn btn-outline-secondary btn-sm" type="button">Edit</button>
-                        <button class="btn btn-sm btn-icon btn-icon-only btn-outline-secondary ms-1" type="button">
-                          <i data-cs-icon="more-vertical"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="mb-2 scroll-item">
-                <div class="row g-0 sh-10 sh-sm-7">
-                  <div class="col-auto">
-                    <img src="img/profile/profile-3.jpg" class="card-img rounded-xl sh-6 sw-6" alt="thumb" />
-                  </div>
-                  <div class="col">
-                    <div class="card-body d-flex flex-column flex-sm-row pt-0 pb-0 ps-3 pe-0 h-100 align-items-sm-center justify-content-sm-between">
-                      <div class="d-flex flex-column mb-2 mb-sm-0">
-                        <div>Olli Hawkins</div>
-                        <div class="text-small text-muted">Client Relations Lead</div>
-                      </div>
-                      <div class="d-flex">
-                        <button class="btn btn-outline-secondary btn-sm" type="button">Edit</button>
-                        <button class="btn btn-sm btn-icon btn-icon-only btn-outline-secondary ms-1" type="button">
-                          <i data-cs-icon="more-vertical"></i>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Latest Registrations End -->
-
-    <!-- Tasks Start -->
-    <div class="col-12 col-xl-6 mb-5">
-      <h2 class="small-title">Tasks</h2>
-      <div class="card h-100-card">
-        <div class="card-body scroll-out">
-          <div class="scroll-by-count" data-childSelector=".scroll-item" data-count="7">
-            <div class="mb-2 scroll-item">
-              <label class="form-check w-100 checked-line-through checked-opacity-75">
-                <input type="checkbox" class="form-check-input" checked />
-                <span class="form-check-label d-block">
-                  <span>Create Wireframes</span>
-                  <span class="text-muted d-block text-small mt-0">Today 09:00</span>
-                </span>
-              </label>
-            </div>
-            <div class="mb-2 scroll-item">
-              <label class="form-check w-100 checked-line-through checked-opacity-75">
-                <input type="checkbox" class="form-check-input" />
-                <span class="form-check-label d-block">
-                  <span>Meeting with the team</span>
-                  <span class="text-muted d-block text-small mt-0">Today 13:00</span>
-                </span>
-              </label>
-            </div>
-            <div class="mb-2 scroll-item">
-              <label class="form-check w-100 checked-line-through checked-opacity-75">
-                <input type="checkbox" class="form-check-input" checked />
-                <span class="form-check-label d-block">
-                  <span>Business lunch with clients</span>
-                  <span class="text-muted d-block text-small mt-0">Today 14:00</span>
-                </span>
-              </label>
-            </div>
-            <div class="mb-2 scroll-item">
-              <label class="form-check w-100 checked-line-through checked-opacity-75">
-                <input type="checkbox" class="form-check-input" checked />
-                <span class="form-check-label d-block">
-                  <span>Training with the team</span>
-                  <span class="text-muted d-block text-small mt-0">Today 15:00</span>
-                </span>
-              </label>
-            </div>
-            <div class="mb-2 scroll-item">
-              <label class="form-check w-100 checked-line-through checked-opacity-75">
-                <input type="checkbox" class="form-check-input" />
-                <span class="form-check-label d-block">
-                  <span>Account meeting</span>
-                  <span class="text-muted d-block text-small mt-0">Today 17:00</span>
-                </span>
-              </label>
-            </div>
-            <div class="mb-2 scroll-item">
-              <label class="form-check w-100 checked-line-through checked-opacity-75">
-                <input type="checkbox" class="form-check-input" />
-                <span class="form-check-label d-block">
-                  <span>Gym</span>
-                  <span class="text-muted d-block text-small mt-0">Today 17:30</span>
-                </span>
-              </label>
-            </div>
-            <div class="mb-2 scroll-item">
-              <label class="form-check w-100 checked-line-through checked-opacity-75">
-                <input type="checkbox" class="form-check-input" />
-                <span class="form-check-label d-block">
-                  <span>Dinner with the family</span>
-                  <span class="text-muted d-block text-small mt-0">Today 19:30</span>
-                </span>
-              </label>
-            </div>
-            <div class="mb-2 scroll-item">
-              <label class="form-check w-100 checked-line-through checked-opacity-75">
-                <input type="checkbox" class="form-check-input" />
-                <span class="form-check-label d-block">
-                  <span>Gym</span>
-                  <span class="text-muted d-block text-small mt-0">Today 17:30</span>
-                </span>
-              </label>
-            </div>
-            <div class="mb-2 scroll-item">
-              <label class="form-check w-100 checked-line-through checked-opacity-75">
-                <input type="checkbox" class="form-check-input" />
-                <span class="form-check-label d-block">
-                  <span>Dinner with the family</span>
-                  <span class="text-muted d-block text-small mt-0">Today 19:30</span>
-                </span>
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Tasks End -->
-  </div>
-
-  <div class="row gy-5">
-    <!-- Recent Ratings Start -->
-    <div class="col-lg-8">
-      <h2 class="small-title">Recent Ratings</h2>
-      <div class="scroll-out mb-n2">
-        <div class="scroll-by-count" data-count="4">
-          <div class="card mb-2" data-intro="Another product card that contains rating!" data-step="4">
-            <div class="row g-0 sh-17 sh-lg-10">
-              <div class="col-auto">
-                <img src="img/product/small/panettone.jpg" alt="user" class="card-img card-img-horizontal h-100 sw-lg-11 sw-14" />
-              </div>
-              <div class="col">
-                <div class="card-body px-4 py-0 h-100">
-                  <div class="row g-0 h-100 align-content-center">
-                    <a href="#" class="col-12 col-lg-5 d-flex flex-column mb-lg-0 mb-2 mb-lg-0 pe-3 d-flex">
-                      <div>Spelt Bread</div>
-                      <div class="text-small text-muted text-truncate">Liquorice fruitcake tiramisu caramels.</div>
-                    </a>
-                    <div class="col-12 col-lg-4 d-flex pe-1 mb-2 mb-lg-0 align-items-lg-center">
-                      <div class="lh-1 text-alternate">
-                        <div class="br-wrapper br-theme-cs-icon">
-                          <select class="recentRating" name="rating" autocomplete="off" data-readonly="true" data-initial-rating="5">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                          </select>
+                            <div class="card-body border-top py-3">
+                                <div class="text-truncate">
+                                    <span class="badge badge-soft-success font-size-11"><i class="mdi mdi-menu-up"> </i> 2.4% </span>
+                                    <span class="text-muted ml-2">From previous period</span>
+                                </div>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                    <div class="col-12 col-lg-3 d-flex flex-column pe-1 align-items-lg-end">
-                      <div class="text-alternate">1.552</div>
-                      <div class="text-muted text-small">Sales</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card mb-2" data-intro="Another product card that contains rating!" data-step="4">
-            <div class="row g-0 sh-17 sh-lg-10">
-              <div class="col-auto">
-                <img src="img/product/small/sandwich-bread.jpg" alt="user" class="card-img card-img-horizontal h-100 sw-lg-11 sw-14" />
-              </div>
-              <div class="col">
-                <div class="card-body px-4 py-0 h-100">
-                  <div class="row g-0 h-100 align-content-center">
-                    <a href="#" class="col-12 col-lg-5 d-flex flex-column mb-lg-0 mb-2 mb-lg-0 pe-3 d-flex">
-                      <div>Cheesymite Scroll</div>
-                      <div class="text-small text-muted text-truncate">Chocolate tiramisu sweet dragée.</div>
-                    </a>
-                    <div class="col-12 col-lg-4 d-flex pe-1 mb-2 mb-lg-0 align-items-lg-center">
-                      <div class="lh-1 text-alternate">
-                        <div class="br-wrapper br-theme-cs-icon">
-                          <select class="recentRating" name="rating" autocomplete="off" data-readonly="true" data-initial-rating="5">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                          </select>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="media">
+                                    <div class="media-body overflow-hidden">
+                                        <p class="text-truncate font-size-14 mb-2">Sales Revenue</p>
+                                        <h4 class="mb-0">$ 38452</h4>
+                                    </div>
+                                    <div class="text-primary">
+                                        <i class="ri-store-2-line font-size-24"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body border-top py-3">
+                                <div class="text-truncate">
+                                    <span class="badge badge-soft-success font-size-11"><i class="mdi mdi-menu-up"> </i> 2.4% </span>
+                                    <span class="text-muted ml-2">From previous period</span>
+                                </div>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                    <div class="col-12 col-lg-3 d-flex flex-column pe-1 align-items-lg-end">
-                      <div class="text-alternate">1.192</div>
-                      <div class="text-muted text-small">Sales</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card mb-2" data-intro="Another product card that contains rating!" data-step="4">
-            <div class="row g-0 sh-17 sh-lg-10">
-              <div class="col-auto">
-                <img src="img/product/small/zopf.jpg" alt="user" class="card-img card-img-horizontal h-100 sw-lg-11 sw-14" />
-              </div>
-              <div class="col">
-                <div class="card-body px-4 py-0 h-100">
-                  <div class="row g-0 h-100 align-content-center">
-                    <a href="#" class="col-12 col-lg-5 d-flex flex-column mb-lg-0 mb-2 mb-lg-0 pe-3 d-flex">
-                      <div>Cholermüs</div>
-                      <div class="text-small text-muted text-truncate">Candy brownie sesame snaps pastry.</div>
-                    </a>
-                    <div class="col-12 col-lg-4 d-flex pe-1 mb-2 mb-lg-0 align-items-lg-center">
-                      <div class="lh-1 text-alternate">
-                        <div class="br-wrapper br-theme-cs-icon">
-                          <select class="recentRating" name="rating" autocomplete="off" data-readonly="true" data-initial-rating="4">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                          </select>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="media">
+                                    <div class="media-body overflow-hidden">
+                                        <p class="text-truncate font-size-14 mb-2">Average Price</p>
+                                        <h4 class="mb-0">$ 15.4</h4>
+                                    </div>
+                                    <div class="text-primary">
+                                        <i class="ri-briefcase-4-line font-size-24"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body border-top py-3">
+                                <div class="text-truncate">
+                                    <span class="badge badge-soft-success font-size-11"><i class="mdi mdi-menu-up"> </i> 2.4% </span>
+                                    <span class="text-muted ml-2">From previous period</span>
+                                </div>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                    <div class="col-12 col-lg-3 d-flex flex-column pe-1 align-items-lg-end">
-                      <div class="text-alternate">2.853</div>
-                      <div class="text-muted text-small">Sales</div>
-                    </div>
-                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
+                <!-- end row -->
 
-          <div class="card mb-2" data-intro="Another product card that contains rating!" data-step="4">
-            <div class="row g-0 sh-17 sh-lg-10">
-              <div class="col-auto">
-                <img src="img/product/small/pullman-loaf.jpg" alt="user" class="card-img card-img-horizontal h-100 sw-lg-11 sw-14" />
-              </div>
-              <div class="col">
-                <div class="card-body px-4 py-0 h-100">
-                  <div class="row g-0 h-100 align-content-center">
-                    <a href="#" class="col-12 col-lg-5 d-flex flex-column mb-lg-0 mb-2 mb-lg-0 pe-3 d-flex">
-                      <div>Ruisreikäleipä</div>
-                      <div class="text-small text-muted text-truncate">Candy cookie jujubes gummi bears.</div>
-                    </a>
-                    <div class="col-12 col-lg-4 d-flex pe-1 mb-2 mb-lg-0 align-items-lg-center">
-                      <div class="lh-1 text-alternate">
-                        <div class="br-wrapper br-theme-cs-icon">
-                          <select class="recentRating" name="rating" autocomplete="off" data-readonly="true" data-initial-rating="5">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                          </select>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="float-right d-none d-md-inline-block">
+                            <div class="btn-group mb-2">
+                                <button type="button" class="btn btn-sm btn-light">Today</button>
+                                <button type="button" class="btn btn-sm btn-light active">Weekly</button>
+                                <button type="button" class="btn btn-sm btn-light">Monthly</button>
+                            </div>
                         </div>
-                      </div>
+                        <h4 class="card-title mb-4">Revenue Analytics</h4>
+                        <div>
+                            <div id="line-column-chart" class="apex-charts" dir="ltr"></div>
+                        </div>
                     </div>
-                    <div class="col-12 col-lg-3 d-flex flex-column pe-1 align-items-lg-end">
-                      <div class="text-alternate">1.290</div>
-                      <div class="text-muted text-small">Sales</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="card mb-2" data-intro="Another product card that contains rating!" data-step="4">
-            <div class="row g-0 sh-17 sh-lg-10">
-              <div class="col-auto">
-                <img src="img/product/small/barmbrack.jpg" alt="user" class="card-img card-img-horizontal h-100 sw-lg-11 sw-14" />
-              </div>
-              <div class="col">
-                <div class="card-body px-4 py-0 h-100">
-                  <div class="row g-0 h-100 align-content-center">
-                    <a href="#" class="col-12 col-lg-5 d-flex flex-column mb-lg-0 mb-2 mb-lg-0 pe-3 d-flex">
-                      <div>Zopf</div>
-                      <div class="text-small text-muted text-truncate">Danish cookie marzipan chocolate bar.</div>
-                    </a>
-                    <div class="col-12 col-lg-4 d-flex pe-1 mb-2 mb-lg-0 align-items-lg-center">
-                      <div class="lh-1 text-alternate">
-                        <div class="br-wrapper br-theme-cs-icon">
-                          <select class="recentRating" name="rating" autocomplete="off" data-readonly="true" data-initial-rating="5">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                          </select>
+                    <div class="card-body border-top text-center">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="d-inline-flex">
+                                    <h5 class="mr-2">$12,253</h5>
+                                    <div class="text-success">
+                                        <i class="mdi mdi-menu-up font-size-14"> </i>2.2 %
+                                    </div>
+                                </div>
+                                <p class="text-muted text-truncate mb-0">This month</p>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="mt-4 mt-sm-0">
+                                    <p class="mb-2 text-muted text-truncate"><i class="mdi mdi-circle text-primary font-size-10 mr-1"></i> This Year :</p>
+                                    <div class="d-inline-flex">
+                                        <h5 class="mb-0 mr-2">$ 34,254</h5>
+                                        <div class="text-success">
+                                            <i class="mdi mdi-menu-up font-size-14"> </i>2.1 %
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="mt-4 mt-sm-0">
+                                    <p class="mb-2 text-muted text-truncate"><i class="mdi mdi-circle text-success font-size-10 mr-1"></i> Previous Year :</p>
+                                    <div class="d-inline-flex">
+                                        <h5 class="mb-0">$ 32,695</h5>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                      </div>
                     </div>
-                    <div class="col-12 col-lg-3 d-flex flex-column pe-1 align-items-lg-end">
-                      <div class="text-alternate">1.744</div>
-                      <div class="text-muted text-small">Sales</div>
-                    </div>
-                  </div>
                 </div>
-              </div>
             </div>
-          </div>
+
+            <div class="col-xl-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="float-right">
+                            <select class="custom-select custom-select-sm">
+                                <option selected>Apr</option>
+                                <option value="1">Mar</option>
+                                <option value="2">Feb</option>
+                                <option value="3">Jan</option>
+                            </select>
+                        </div>
+                        <h4 class="card-title mb-4">Sales Analytics</h4>
+
+                        <div id="donut-chart" class="apex-charts"></div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="text-center mt-4">
+                                    <p class="mb-2 text-truncate"><i class="mdi mdi-circle text-primary font-size-10 mr-1"></i> Product A</p>
+                                    <h5>42 %</h5>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="text-center mt-4">
+                                    <p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success font-size-10 mr-1"></i> Product B</p>
+                                    <h5>26 %</h5>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="text-center mt-4">
+                                    <p class="mb-2 text-truncate"><i class="mdi mdi-circle text-warning font-size-10 mr-1"></i> Product C</p>
+                                    <h5>42 %</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="dropdown float-right">
+                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                <i class="mdi mdi-dots-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                            </div>
+                        </div>
+
+                        <h4 class="card-title mb-4">Earning Reports</h4>
+                        <div class="text-center">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div>
+                                        <div class="mb-3">
+                                            <div id="radialchart-1" class="apex-charts"></div>
+                                        </div>
+
+                                        <p class="text-muted text-truncate mb-2">Weekly Earnings</p>
+                                        <h5 class="mb-0">$2,523</h5>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="mt-5 mt-sm-0">
+                                        <div class="mb-3">
+                                            <div id="radialchart-2" class="apex-charts"></div>
+                                        </div>
+
+                                        <p class="text-muted text-truncate mb-2">Monthly Earnings</p>
+                                        <h5 class="mb-0">$11,235</h5>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <!-- Recent Ratings End -->
+        <!-- end row -->
 
-    <!-- Spendings Start -->
-    <div class="col-lg-4">
-      <h2 class="small-title">Spendings</h2>
-      <div class="card h-100-card">
-        <div class="card-body">
-          <div class="row g-0 align-items-center mb-4 sh-5">
-            <div class="col-auto">
-              <div class="d-flex flex-column justify-content-center align-items-center sh-5 sw-5 rounded-xl bg-gradient-primary">
-                <i data-cs-icon="loaf" class="text-white"></i>
-              </div>
-            </div>
-            <div class="col ps-3">
-              <div class="row g-0">
-                <div class="col">
-                  <div class="p mb-0 sh-5 d-flex align-items-center">Ingredients</div>
-                </div>
-                <div class="col-auto">
-                  <div class="cta-3 text-primary sh-5 d-flex align-items-center">30%</div>
-                </div>
-              </div>
-              <div class="row g-0">
-                <div class="col">
-                  <div class="progress progress-xs">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="dropdown float-right">
+                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                <i class="mdi mdi-dots-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                            </div>
+                        </div>
 
-          <div class="row g-0 align-items-center mb-4 sh-5">
-            <div class="col-auto">
-              <div class="d-flex flex-column justify-content-center align-items-center sh-5 sw-5 rounded-xl bg-gradient-primary">
-                <i data-cs-icon="building" class="text-white"></i>
-              </div>
-            </div>
-            <div class="col ps-3">
-              <div class="row g-0">
-                <div class="col">
-                  <div class="p mb-0 sh-5 d-flex align-items-center">Rent</div>
-                </div>
-                <div class="col-auto">
-                  <div class="cta-3 text-primary sh-5 d-flex align-items-center">15%</div>
-                </div>
-              </div>
-              <div class="row g-0">
-                <div class="col sh-1">
-                  <div class="progress progress-xs">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                        <h4 class="card-title mb-3">Sources</h4>
 
-          <div class="row g-0 align-items-center mb-4 sh-5">
-            <div class="col-auto">
-              <div class="d-flex flex-column justify-content-center align-items-center sh-5 sw-5 rounded-xl bg-gradient-primary">
-                <i data-cs-icon="electricity" class="text-white"></i>
-              </div>
-            </div>
-            <div class="col ps-3">
-              <div class="row g-0">
-                <div class="col">
-                  <div class="p mb-0 sh-5 d-flex align-items-center">Utilities</div>
-                </div>
-                <div class="col-auto">
-                  <div class="cta-3 text-primary sh-5 d-flex align-items-center">10%</div>
-                </div>
-              </div>
-              <div class="row g-0">
-                <div class="col sh-1">
-                  <div class="progress progress-xs">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+                        <div>
+                            <div class="text-center">
+                                <p class="mb-2">Total sources</p>
+                                <h4>$ 7652</h4>
+                                <div class="text-success">
+                                    <i class="mdi mdi-menu-up font-size-14"> </i>2.2 %
+                                </div>
+                            </div>
 
-          <div class="row g-0">
-            <div class="col pe-4 d-flex flex-column justify-content-between align-items-end">
-              <div class="text-small text-muted sh-3 d-flex align-items-center">BUDGET</div>
-              <div class="text-small text-muted sh-3 d-flex align-items-center">SPEND</div>
-              <div class="text-small text-muted sh-5 d-flex align-items-end">BALANCE</div>
+                            <div class="table-responsive mt-4">
+                                <table class="table table-hover mb-0 table-centered table-nowrap">
+                                    <tbody>
+                                        <tr>
+                                            <td style="width: 60px;">
+                                                <div class="avatar-xs">
+                                                    <div class="avatar-title rounded-circle bg-light">
+                                                        <img src="assets/images/companies/img-1.png" alt="" height="20">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">Source 1</h5>
+                                            </td>
+                                            <td><div id="spak-chart1"></div></td>
+                                            <td>
+                                                <p class="text-muted mb-0">$ 2478</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="avatar-xs">
+                                                    <div class="avatar-title rounded-circle bg-light">
+                                                        <img src="assets/images/companies/img-2.png" alt="" height="20">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">Source 2</h5>
+                                            </td>
+                                            
+                                            <td><div id="spak-chart2"></div></td>
+                                            <td>
+                                                <p class="text-muted mb-0">$ 2625</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="avatar-xs">
+                                                    <div class="avatar-title rounded-circle bg-light">
+                                                        <img src="assets/images/companies/img-3.png" alt="" height="20">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <h5 class="font-size-14 mb-0">Source 3</h5>
+                                            </td>
+                                            <td><div id="spak-chart3"></div></td>
+                                            <td>
+                                                <p class="text-muted mb-0">$ 2856</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <a href="#" class="btn btn-primary btn-sm">View more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-auto d-flex flex-column justify-content-between align-items-end">
-              <div class="text-muted sh-3 d-flex align-items-center">$12.000</div>
-              <div class="text-muted sh-3 d-flex align-items-center">- $8.750</div>
-              <div class="cta-4 text-primary sh-5 d-flex align-items-end">$3.250</div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="dropdown float-right">
+                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                <i class="mdi mdi-dots-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                            </div>
+                        </div>
+
+                        <h4 class="card-title mb-4">Recent Activity Feed</h4>
+
+                        <div data-simplebar style="max-height: 330px;">
+                            <ul class="list-unstyled activity-wid">
+                                <li class="activity-list">
+                                    <div class="activity-icon avatar-xs">
+                                        <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                            <i class="ri-edit-2-fill"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h5 class="font-size-13">28 Apr, 2020 <small class="text-muted">12:07 am</small></h5>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-muted mb-0">Responded to need “Volunteer Activities”</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="activity-list">
+                                    <div class="activity-icon avatar-xs">
+                                        <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                            <i class="ri-user-2-fill"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h5 class="font-size-13">21 Apr, 2020 <small class="text-muted">08:01 pm</small></h5>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-muted mb-0">Added an interest “Volunteer Activities”</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="activity-list">
+                                    <div class="activity-icon avatar-xs">
+                                        <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                            <i class="ri-bar-chart-fill"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h5 class="font-size-13">17 Apr, 2020 <small class="text-muted">09:23 am</small></h5>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-muted mb-0">Joined the group “Boardsmanship Forum”</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="activity-list">
+                                    <div class="activity-icon avatar-xs">
+                                        <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                            <i class="ri-mail-fill"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h5 class="font-size-13">11 Apr, 2020 <small class="text-muted">05:10 pm</small></h5>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-muted mb-0">Responded to need “In-Kind Opportunity”</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="activity-list">
+                                    <div class="activity-icon avatar-xs">
+                                        <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                            <i class="ri-calendar-2-fill"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h5 class="font-size-13">07 Apr, 2020 <small class="text-muted">12:47 pm</small></h5>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-muted mb-0">Created need “Volunteer Activities”</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="activity-list">
+                                    <div class="activity-icon avatar-xs">
+                                        <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                            <i class="ri-edit-2-fill"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h5 class="font-size-13">05 Apr, 2020 <small class="text-muted">03:09 pm</small></h5>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-muted mb-0">Attending the event “Some New Event”</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="activity-list">
+                                    <div class="activity-icon avatar-xs">
+                                        <span class="avatar-title bg-soft-primary text-primary rounded-circle">
+                                            <i class="ri-user-2-fill"></i>
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <h5 class="font-size-13">02 Apr, 2020 <small class="text-muted">12:07 am</small></h5>
+                                        </div>
+                                        
+                                        <div>
+                                            <p class="text-muted mb-0">Responded to need “In-Kind Opportunity”</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="dropdown float-right">
+                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                <i class="mdi mdi-dots-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                            </div>
+                        </div>
+
+                        <h4 class="card-title mb-4">Revenue by Locations</h4>
+
+                        <div id="usa-vectormap" style="height: 196px"></div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-xl-5 col-md-6">
+                                <div class="mt-2">
+                                    <div class="clearfix py-2">
+                                        <h5 class="float-right font-size-16 m-0">$ 2542</h5>
+                                        <p class="text-muted mb-0 text-truncate">California :</p>
+                                        
+                                    </div>
+                                    <div class="clearfix py-2">
+                                        <h5 class="float-right font-size-16 m-0">$ 2245</h5>
+                                        <p class="text-muted mb-0 text-truncate">Nevada :</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 offset-xl-1 col-md-6">
+                                <div class="mt-2">
+                                    <div class="clearfix py-2">
+                                        <h5 class="float-right font-size-16 m-0">$ 2156</h5>
+                                        <p class="text-muted mb-0 text-truncate">Montana :</p>
+                                        
+                                    </div>
+                                    <div class="clearfix py-2">
+                                        <h5 class="float-right font-size-16 m-0">$ 1845</h5>
+                                        <p class="text-muted mb-0 text-truncate">Texas :</p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <a href="#" class="btn btn-primary btn-sm">Learn more</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <!-- Spendings End -->
-  </div>
+        <!-- end row -->
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body border-bottom">
+
+                        <div class="user-chat-border">
+                            <div class="row">
+                                <div class="col-md-5 col-9">
+                                    <h5 class="font-size-15 mb-1">Frank Vickery</h5>
+                                    <p class="text-muted mb-0"><i class="mdi mdi-circle text-success align-middle mr-1"></i> Active now</p>
+                                </div>
+                                <div class="col-md-7 col-3">
+                                    <ul class="list-inline user-chat-nav text-right mb-0">
+                                        <li class="list-inline-item">
+                                            <div class="dropdown">
+                                                <button class="btn nav-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="mdi mdi-magnify"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-md p-0">
+                                                    <form class="p-2">
+                                                        <div class="search-box">
+                                                            <div class="position-relative">
+                                                                <input type="text" class="form-control rounded bg-light border-0" placeholder="Search...">
+                                                                <i class="mdi mdi-magnify search-icon"></i>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-inline-item d-none d-sm-inline-block">
+                                            <div class="dropdown">
+                                                <button class="btn nav-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="mdi mdi-cog"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#">View Profile</a>
+                                                    <a class="dropdown-item" href="#">Clear chat</a>
+                                                    <a class="dropdown-item" href="#">Muted</a>
+                                                    <a class="dropdown-item" href="#">Delete</a>
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <li class="list-inline-item">
+                                            <div class="dropdown">
+                                                <button class="btn nav-btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="mdi mdi-dots-horizontal"></i>
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a class="dropdown-item" href="#">Action</a>
+                                                    <a class="dropdown-item" href="#">Another action</a>
+                                                    <a class="dropdown-item" href="#">Something else</a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chat-widget">
+                            <div class="chat-conversation" data-simplebar style="max-height: 292px;">
+                                <ul class="list-unstyled mb-0 pr-3">
+                                    <li>
+                                        <div class="conversation-list">
+                                            <div class="chat-avatar">
+                                                <img src="assets/images/users/avatar-2.jpg" alt="">
+                                            </div>
+                                            <div class="ctext-wrap">
+                                                <div class="conversation-name">Frank Vickery</div>
+                                                <div class="ctext-wrap-content">
+                                                    <p class="mb-0">
+                                                        Hey! I am available
+                                                    </p>
+                                                </div>
+                                                <p class="chat-time mb-0"><i class="mdi mdi-clock-outline align-middle mr-1"></i> 12:09</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </li>
+
+                                    <li class="right">
+                                        <div class="conversation-list">
+                                            <div class="ctext-wrap">
+                                                <div class="conversation-name">Ricky Clark</div>
+                                                <div class="ctext-wrap-content">
+                                                    <p class="mb-0">
+                                                        Hi, How are you? What about our next meeting?
+                                                    </p>
+                                                </div>
+
+                                                <p class="chat-time mb-0"><i class="bx bx-time-five align-middle mr-1"></i> 10:02</p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li> 
+                                        <div class="chat-day-title">
+                                            <span class="title">Today</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="conversation-list">
+                                            <div class="chat-avatar">
+                                                <img src="assets/images/users/avatar-2.jpg" alt="">
+                                            </div>
+                                            <div class="ctext-wrap">
+                                                <div class="conversation-name">Frank Vickery</div>
+                                                <div class="ctext-wrap-content">
+                                                    <p class="mb-0">
+                                                        Hello!
+                                                    </p>
+                                                </div>
+                                                <p class="chat-time mb-0"><i class="mdi mdi-clock-outline align-middle mr-1"></i> 10:00</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </li>
+
+                                    <li class="right">
+                                        <div class="conversation-list">
+                                            <div class="ctext-wrap">
+                                                <div class="conversation-name">Ricky Clark</div>
+                                                <div class="ctext-wrap-content">
+                                                    <p class="mb-0">
+                                                        Hi, How are you? What about our next meeting?
+                                                    </p>
+                                                </div>
+
+                                                <p class="chat-time mb-0"><i class="bx bx-time-five align-middle mr-1"></i> 10:02</p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="conversation-list">
+                                            <div class="chat-avatar">
+                                                <img src="assets/images/users/avatar-2.jpg" alt="">
+                                            </div>
+                                            <div class="ctext-wrap">
+                                                <div class="conversation-name">Frank Vickery</div>
+                                                <div class="ctext-wrap-content">
+                                                    <p class="mb-0">
+                                                        Yeah everything is fine
+                                                    </p>
+                                                </div>
+                                                
+                                                <p class="chat-time mb-0"><i class="bx bx-time-five align-middle mr-1"></i> 10:06</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </li>
+
+                                    <li >
+                                        <div class="conversation-list">
+                                            <div class="chat-avatar">
+                                                <img src="assets/images/users/avatar-2.jpg" alt="">
+                                            </div>
+                                            <div class="ctext-wrap">
+                                                <div class="conversation-name">Frank Vickery</div>
+                                                <div class="ctext-wrap-content">
+                                                    <p class="mb-0">& Next meeting tomorrow 10.00AM</p>
+                                                </div>
+                                                <p class="chat-time mb-0"><i class="bx bx-time-five align-middle mr-1"></i> 10:06</p>
+                                            </div>
+                                            
+                                        </div>
+                                    </li>
+
+                                    <li class="right">
+                                        <div class="conversation-list">
+                                            <div class="ctext-wrap">
+                                                <div class="conversation-name">Ricky Clark</div>
+                                                <div class="ctext-wrap-content">
+                                                    <p class="mb-0">
+                                                        Wow that's great
+                                                    </p>
+                                                </div>
+
+                                                <p class="chat-time mb-0"><i class="bx bx-time-five align-middle mr-1"></i> 10:07</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3 chat-input-section border-top">
+                        <div class="row">
+                            <div class="col">
+                                <div>
+                                    <input type="text" class="form-control rounded chat-input pl-3" placeholder="Enter Message...">
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-primary chat-send w-md waves-effect waves-light"><span class="d-none d-sm-inline-block mr-2">Send</span> <i class="mdi mdi-send"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="dropdown float-right">
+                            <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
+                                <i class="mdi mdi-dots-vertical"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Sales Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Export Report</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Profit</a>
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                            </div>
+                        </div>
+
+                        <h4 class="card-title mb-4">Latest Transactions</h4>
+
+                        <div class="table-responsive">
+                            <table class="table table-centered datatable dt-responsive nowrap" data-page-length="5" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th style="width: 20px;">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="ordercheck">
+                                                <label class="custom-control-label" for="ordercheck">&nbsp;</label>
+                                            </div>
+                                        </th>
+                                        <th>Order ID</th>
+                                        <th>Date</th>
+                                        <th>Billing Name</th>
+                                        <th>Total</th>
+                                        <th>Payment Status</th>
+                                        <th style="width: 120px;">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="ordercheck1">
+                                                <label class="custom-control-label" for="ordercheck1">&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        
+                                        <td><a href="javascript: void(0);" class="text-dark font-weight-bold">#NZ1572</a> </td>
+                                        <td>
+                                            04 Apr, 2020
+                                        </td>
+                                        <td>Walter Brown</td>
+                                        
+                                        <td>
+                                            $172
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-success font-size-12">Paid</div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="mr-3 text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                            <a href="javascript:void(0);" class="text-danger" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can font-size-18"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="ordercheck2">
+                                                <label class="custom-control-label" for="ordercheck2">&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        
+                                        <td><a href="javascript: void(0);" class="text-dark font-weight-bold">#NZ1571</a> </td>
+                                        <td>
+                                            03 Apr, 2020
+                                        </td>
+                                        <td>Jimmy Barker</td>
+                                        
+                                        <td>
+                                            $165
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-warning font-size-12">unpaid</div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="mr-3 text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                            <a href="javascript:void(0);" class="text-danger" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can font-size-18"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="ordercheck3">
+                                                <label class="custom-control-label" for="ordercheck3">&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        
+                                        <td><a href="javascript: void(0);" class="text-dark font-weight-bold">#NZ1570</a> </td>
+                                        <td>
+                                            03 Apr, 2020
+                                        </td>
+                                        <td>Donald Bailey</td>
+                                        
+                                        <td>
+                                            $146
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-success font-size-12">Paid</div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="mr-3 text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                            <a href="javascript:void(0);" class="text-danger" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can font-size-18"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="ordercheck4">
+                                                <label class="custom-control-label" for="ordercheck4">&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        
+                                        <td><a href="javascript: void(0);" class="text-dark font-weight-bold">#NZ1569</a> </td>
+                                        <td>
+                                            02 Apr, 2020
+                                        </td>
+                                        <td>Paul Jones</td>
+                                        
+                                        <td>
+                                            $183
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-success font-size-12">Paid</div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="mr-3 text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                            <a href="javascript:void(0);" class="text-danger" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can font-size-18"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="ordercheck5">
+                                                <label class="custom-control-label" for="ordercheck5">&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        
+                                        <td><a href="javascript: void(0);" class="text-dark font-weight-bold">#NZ1568</a> </td>
+                                        <td>
+                                            01 Apr, 2020
+                                        </td>
+                                        <td>Jefferson Allen</td>
+                                        
+                                        <td>
+                                            $160
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-danger font-size-12">Chargeback</div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="mr-3 text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                            <a href="javascript:void(0);" class="text-danger" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can font-size-18"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="ordercheck6">
+                                                <label class="custom-control-label" for="ordercheck6">&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        
+                                        <td><a href="javascript: void(0);" class="text-dark font-weight-bold">#NZ1567</a> </td>
+                                        <td>
+                                            31 Mar, 2020
+                                        </td>
+                                        <td>Jeffrey Waltz</td>
+                                        
+                                        <td>
+                                            $105
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-warning font-size-12">unpaid</div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="mr-3 text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                            <a href="javascript:void(0);" class="text-danger" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can font-size-18"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="ordercheck7">
+                                                <label class="custom-control-label" for="ordercheck7">&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        
+                                        <td><a href="javascript: void(0);" class="text-dark font-weight-bold">#NZ1566</a> </td>
+                                        <td>
+                                            30 Mar, 2020
+                                        </td>
+                                        <td>Jewel Buckley</td>
+                                        
+                                        <td>
+                                            $112
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-success font-size-12">Paid</div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="mr-3 text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                            <a href="javascript:void(0);" class="text-danger" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can font-size-18"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="ordercheck8">
+                                                <label class="custom-control-label" for="ordercheck8">&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        
+                                        <td><a href="javascript: void(0);" class="text-dark font-weight-bold">#NZ1565</a> </td>
+                                        <td>
+                                            29 Mar, 2020
+                                        </td>
+                                        <td>Jamison Clark</td>
+                                        
+                                        <td>
+                                            $123
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-success font-size-12">Paid</div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="mr-3 text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                            <a href="javascript:void(0);" class="text-danger" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can font-size-18"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="ordercheck9">
+                                                <label class="custom-control-label" for="ordercheck9">&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        
+                                        <td><a href="javascript: void(0);" class="text-dark font-weight-bold">#NZ1564</a> </td>
+                                        <td>
+                                            28 Mar, 2020
+                                        </td>
+                                        <td>Eddy Torres</td>
+                                        
+                                        <td>
+                                            $141
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-success font-size-12">Paid</div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="mr-3 text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                            <a href="javascript:void(0);" class="text-danger" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can font-size-18"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="ordercheck10">
+                                                <label class="custom-control-label" for="ordercheck10">&nbsp;</label>
+                                            </div>
+                                        </td>
+                                        
+                                        <td><a href="javascript: void(0);" class="text-dark font-weight-bold">#NZ1563</a> </td>
+                                        <td>
+                                            28 Mar, 2020
+                                        </td>
+                                        <td>Frank Dean</td>
+                                        
+                                        <td>
+                                            $164
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-warning font-size-12">unpaid</div>
+                                        </td>
+                                        <td>
+                                            <a href="javascript:void(0);" class="mr-3 text-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"><i class="mdi mdi-pencil font-size-18"></i></a>
+                                            <a href="javascript:void(0);" class="text-danger" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"><i class="mdi mdi-trash-can font-size-18"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+
+    </div> <!-- container-fluid -->
 </div>
-</main>
 @endsection

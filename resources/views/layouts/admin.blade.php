@@ -1,434 +1,132 @@
-<!DOCTYPE html>
-<html lang="en" data-footer="true" data-placement="horizontal" data-behaviour="pinned" data-layout="fluid" data-radius="rounded" data-color="light-pink" data-navcolor="default" data-show="true" data-dimension="desktop">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
-    <meta name="description" content="A dashboard implementation that mainly has visual items such as banners, call to action buttons and stats." />
-    <!-- Favicon Tags Start -->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ asset('img/favicon/apple-touch-icon-57x57.png') }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('img/favicon/apple-touch-icon-114x114.png') }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('img/favicon/apple-touch-icon-72x72.png') }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('img/favicon/apple-touch-icon-144x144.png') }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ asset('img/favicon/apple-touch-icon-60x60.png') }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ asset('img/favicon/apple-touch-icon-120x120.png') }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ asset('img/favicon/apple-touch-icon-76x76.png') }}" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ asset('img/favicon/apple-touch-icon-152x152.png') }}" />
-    <link rel="icon" type="image/png" href="{{ asset('img/favicon/favicon-196x196.png') }}" sizes="196x196" />
-    <link rel="icon" type="image/png" href="{{ asset('img/favicon/favicon-96x96.png') }}" sizes="96x96" />
-    <link rel="icon" type="image/png" href="{{ asset('img/favicon/favicon-32x32.png') }}" sizes="32x32" />
-    <link rel="icon" type="image/png" href="{{ asset('img/favicon/favicon-16x16.png') }}" sizes="16x16" />
-    <link rel="icon" type="image/png" href="{{ asset('img/favicon/favicon-128.png') }}" sizes="128x128" />
-    <meta name="application-name" content="&nbsp;" />
-    <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="{{ asset('img/favicon/mstile-144x144.png') }}" />
-    <meta name="msapplication-square70x70logo" content="{{ asset('img/favicon/mstile-70x70.png') }}" />
-    <meta name="msapplication-square150x150logo" content="{{ asset('img/favicon/mstile-150x150.png') }}" />
-    <meta name="msapplication-wide310x150logo" content="{{ asset('img/favicon/mstile-310x150.png') }}" />
-    <meta name="msapplication-square310x310logo" content="{{ asset('img/favicon/mstile-310x310.png') }}" />
-    <!-- Favicon Tags End -->
-    <!-- Font Tags Start -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('font/CS-Interface/style.css') }}" />
-    <!-- Font Tags End -->
-    <!-- Vendor Styles Start -->
-    <link rel="stylesheet" href="{{ asset('css/vendor/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/vendor/OverlayScrollbars.min.css') }}" />
+<!doctype html>
+<html lang="en">
 
-    <!-- Vendor Styles End -->
-    <!-- Template Base Styles Start -->
-    <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
-    <!-- Template Base Styles End -->
+    <head>
+        
+        <meta charset="utf-8" />
+        <title>Dashboard | Nazox - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+        <meta content="Themesdesign" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
 
-    <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
-    <script src="{{ asset('js/base/loader.js') }}"></script>
-  </head>
+        <!-- jquery.vectormap css -->
+        <link href="{{ asset('assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.css') }}" rel="stylesheet" type="text/css" />
 
-  <body>
-    <div id="root">
-      <div id="nav" class="nav-container d-flex">
-        <div class="nav-content d-flex">
-          <!-- Logo Start -->
-          <div class="logo position-relative">
-            <a href="Dashboards.Default.html">
-              <!-- Logo can be added directly -->
-              <!-- <img src="img/logo/logo-white.svg" alt="logo" /> -->
+        <!-- DataTables -->
+        <link href="{{ asset('assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />
 
-              <!-- Or added via css to provide different ones for different color themes -->
-              <div class="img"></div>
-            </a>
-          </div>
-          <!-- Logo End -->
+        <!-- Responsive datatable examples -->
+        <link href="{{ asset('assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css') }}" rel="stylesheet" type="text/css" />  
 
-          <!-- Language Switch Start -->
-          <div class="language-switch-container">
-            <button class="btn btn-empty language-button dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN</button>
-            <div class="dropdown-menu">
-              <a href="#" class="dropdown-item">DE</a>
-              <a href="#" class="dropdown-item active">EN</a>
-              <a href="#" class="dropdown-item">ES</a>
+        <!-- Bootstrap Css -->
+        <link href="{{ asset('assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="{{ asset('assets/css/app.min.css') }}" id="app-style" rel="stylesheet" type="text/css" />
+        <script src="{{ asset('assets/libs/jquery/jquery.min.js') }}"></script>
+    </head>
+
+    <body data-sidebar="dark">
+
+        <!-- Begin page -->
+        <div id="layout-wrapper">
+
+            @include('includes/topbar')
+            <!-- ========== Left Sidebar Start ========== -->
+            @include('includes/leftsidebar')
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start right Content here -->
+            <!-- ============================================================== -->
+            <div class="main-content">
+
+                @yield('content')
+                <!-- End Page-content -->
+
+                @include('includes/footer')
             </div>
-          </div>
-          <!-- Language Switch End -->
+            <!-- end main content-->
 
-          <!-- User Menu Start -->
-          @include('includes/user_menu')
-          <!-- User Menu End -->
-
-          <!-- Icons Menu Start -->
-          @include('includes/icon_menu')
-          <!-- Icons Menu End -->
-
-          <!-- Menu Start -->
-          @include('includes/menu')
-          <!-- Menu End -->
-
-          <!-- Mobile Buttons Start -->
-          <div class="mobile-buttons-container">
-            <!-- Scrollspy Mobile Button Start -->
-            <a href="#" id="scrollSpyButton" class="spy-button" data-bs-toggle="dropdown">
-              <i data-cs-icon="menu-dropdown"></i>
-            </a>
-            <!-- Scrollspy Mobile Button End -->
-
-            <!-- Scrollspy Mobile Dropdown Start -->
-            <div class="dropdown-menu dropdown-menu-end" id="scrollSpyDropdown"></div>
-            <!-- Scrollspy Mobile Dropdown End -->
-
-            <!-- Menu Button Start -->
-            <a href="#" id="mobileMenuButton" class="menu-button">
-              <i data-cs-icon="menu"></i>
-            </a>
-            <!-- Menu Button End -->
-          </div>
-          <!-- Mobile Buttons End -->
         </div>
-        <div class="nav-shadow"></div>
-      </div>
+        <!-- END layout-wrapper -->
 
-      @yield('content')
-
-      <!-- Layout Footer Start -->
-      @include('includes/footer')
-      <!-- Layout Footer End -->
-    </div>
-
-    <!-- Theme Settings Modal Start -->
-    <div
-      class="modal fade modal-right scroll-out-negative"
-      id="settings"
-      data-bs-backdrop="true"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="settings"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-scrollable full" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Theme Settings</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-
-          <div class="modal-body">
-            <div class="scroll-track-visible">
-              <div class="mb-5" id="color">
-                <label class="mb-3 d-inline-block form-label">Color</label>
-                <div class="row d-flex g-3 justify-content-between flex-wrap mb-3">
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="light-blue" data-parent="color">
-                    <div class="card rounded-md p-3 mb-1 no-shadow color">
-                      <div class="blue-light"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">LIGHT BLUE</span>
-                    </div>
-                  </a>
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="dark-blue" data-parent="color">
-                    <div class="card rounded-md p-3 mb-1 no-shadow color">
-                      <div class="blue-dark"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">DARK BLUE</span>
-                    </div>
-                  </a>
+        <!-- Right Sidebar -->
+        <div class="right-bar">
+            <div data-simplebar class="h-100">
+                <div class="rightbar-title px-3 py-4">
+                    <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                        <i class="mdi mdi-close noti-icon"></i>
+                    </a>
+                    <h5 class="m-0">Settings</h5>
                 </div>
 
-                <div class="row d-flex g-3 justify-content-between flex-wrap mb-3">
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="light-red" data-parent="color">
-                    <div class="card rounded-md p-3 mb-1 no-shadow color">
-                      <div class="red-light"></div>
+                <!-- Settings -->
+                <hr class="mt-0" />
+                <h6 class="text-center mb-0">Choose Layouts</h6>
+
+                <div class="p-4">
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/layout-1.jpg" class="img-fluid img-thumbnail" alt="">
                     </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">LIGHT RED</span>
+                    <div class="custom-control custom-switch mb-3">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
+                        <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
                     </div>
-                  </a>
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="dark-red" data-parent="color">
-                    <div class="card rounded-md p-3 mb-1 no-shadow color">
-                      <div class="red-dark"></div>
+    
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/layout-2.jpg" class="img-fluid img-thumbnail" alt="">
                     </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">DARK RED</span>
+                    <div class="custom-control custom-switch mb-3">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="assets/css/app-dark.min.css" />
+                        <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
                     </div>
-                  </a>
+    
+                    <div class="mb-2">
+                        <img src="assets/images/layouts/layout-3.jpg" class="img-fluid img-thumbnail" alt="">
+                    </div>
+                    <div class="custom-control custom-switch mb-5">
+                        <input type="checkbox" class="custom-control-input theme-choice" id="rtl-mode-switch" data-appStyle="assets/css/app-rtl.min.css" />
+                        <label class="custom-control-label" for="rtl-mode-switch">RTL Mode</label>
+                    </div>
+
+            
                 </div>
 
-                <div class="row d-flex g-3 justify-content-between flex-wrap mb-3">
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="light-green" data-parent="color">
-                    <div class="card rounded-md p-3 mb-1 no-shadow color">
-                      <div class="green-light"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">LIGHT GREEN</span>
-                    </div>
-                  </a>
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="dark-green" data-parent="color">
-                    <div class="card rounded-md p-3 mb-1 no-shadow color">
-                      <div class="green-dark"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">DARK GREEN</span>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="row d-flex g-3 justify-content-between flex-wrap mb-3">
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="light-purple" data-parent="color">
-                    <div class="card rounded-md p-3 mb-1 no-shadow color">
-                      <div class="purple-light"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">LIGHT PURPLE</span>
-                    </div>
-                  </a>
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="dark-purple" data-parent="color">
-                    <div class="card rounded-md p-3 mb-1 no-shadow color">
-                      <div class="purple-dark"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">DARK PURPLE</span>
-                    </div>
-                  </a>
-                </div>
-
-                <div class="row d-flex g-3 justify-content-between flex-wrap mb-3">
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="light-pink" data-parent="color">
-                    <div class="card rounded-md p-3 mb-1 no-shadow color">
-                      <div class="pink-light"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">LIGHT PINK</span>
-                    </div>
-                  </a>
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="dark-pink" data-parent="color">
-                    <div class="card rounded-md p-3 mb-1 no-shadow color">
-                      <div class="pink-dark"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">DARK PINK</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="mb-5" id="navcolor">
-                <label class="mb-3 d-inline-block form-label">Override Nav Palette</label>
-                <div class="row d-flex g-3 justify-content-between flex-wrap">
-                  <a href="#" class="flex-grow-1 w-33 option col" data-value="default" data-parent="navcolor">
-                    <div class="card rounded-md p-3 mb-1 no-shadow">
-                      <div class="figure figure-primary top"></div>
-                      <div class="figure figure-secondary bottom"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">DEFAULT</span>
-                    </div>
-                  </a>
-                  <a href="#" class="flex-grow-1 w-33 option col" data-value="light" data-parent="navcolor">
-                    <div class="card rounded-md p-3 mb-1 no-shadow">
-                      <div class="figure figure-secondary figure-light top"></div>
-                      <div class="figure figure-secondary bottom"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">LIGHT</span>
-                    </div>
-                  </a>
-                  <a href="#" class="flex-grow-1 w-33 option col" data-value="dark" data-parent="navcolor">
-                    <div class="card rounded-md p-3 mb-1 no-shadow">
-                      <div class="figure figure-muted figure-dark top"></div>
-                      <div class="figure figure-secondary bottom"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">DARK</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="mb-5" id="placement">
-                <label class="mb-3 d-inline-block form-label">Menu Placement</label>
-                <div class="row d-flex g-3 justify-content-between flex-wrap">
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="horizontal" data-parent="placement">
-                    <div class="card rounded-md p-3 mb-1 no-shadow">
-                      <div class="figure figure-primary top"></div>
-                      <div class="figure figure-secondary bottom"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">HORIZONTAL</span>
-                    </div>
-                  </a>
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="vertical" data-parent="placement">
-                    <div class="card rounded-md p-3 mb-1 no-shadow">
-                      <div class="figure figure-primary left"></div>
-                      <div class="figure figure-secondary right"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">VERTICAL</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="mb-5" id="behaviour">
-                <label class="mb-3 d-inline-block form-label">Menu Behaviour</label>
-                <div class="row d-flex g-3 justify-content-between flex-wrap">
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="pinned" data-parent="behaviour">
-                    <div class="card rounded-md p-3 mb-1 no-shadow">
-                      <div class="figure figure-primary left large"></div>
-                      <div class="figure figure-secondary right small"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">PINNED</span>
-                    </div>
-                  </a>
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="unpinned" data-parent="behaviour">
-                    <div class="card rounded-md p-3 mb-1 no-shadow">
-                      <div class="figure figure-primary left"></div>
-                      <div class="figure figure-secondary right"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">UNPINNED</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="mb-5" id="layout">
-                <label class="mb-3 d-inline-block form-label">Layout</label>
-                <div class="row d-flex g-3 justify-content-between flex-wrap">
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="fluid" data-parent="layout">
-                    <div class="card rounded-md p-3 mb-1 no-shadow">
-                      <div class="figure figure-primary top"></div>
-                      <div class="figure figure-secondary bottom"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">FLUID</span>
-                    </div>
-                  </a>
-                  <a href="#" class="flex-grow-1 w-50 option col" data-value="boxed" data-parent="layout">
-                    <div class="card rounded-md p-3 mb-1 no-shadow">
-                      <div class="figure figure-primary top"></div>
-                      <div class="figure figure-secondary bottom small"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">BOXED</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-
-              <div class="mb-5" id="radius">
-                <label class="mb-3 d-inline-block form-label">Radius</label>
-                <div class="row d-flex g-3 justify-content-between flex-wrap">
-                  <a href="#" class="flex-grow-1 w-33 option col" data-value="rounded" data-parent="radius">
-                    <div class="card rounded-md radius-rounded p-3 mb-1 no-shadow">
-                      <div class="figure figure-primary top"></div>
-                      <div class="figure figure-secondary bottom"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">ROUNDED</span>
-                    </div>
-                  </a>
-                  <a href="#" class="flex-grow-1 w-33 option col" data-value="standard" data-parent="radius">
-                    <div class="card rounded-md radius-regular p-3 mb-1 no-shadow">
-                      <div class="figure figure-primary top"></div>
-                      <div class="figure figure-secondary bottom"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">STANDARD</span>
-                    </div>
-                  </a>
-                  <a href="#" class="flex-grow-1 w-33 option col" data-value="flat" data-parent="radius">
-                    <div class="card rounded-md radius-flat p-3 mb-1 no-shadow">
-                      <div class="figure figure-primary top"></div>
-                      <div class="figure figure-secondary bottom"></div>
-                    </div>
-                    <div class="text-muted text-part">
-                      <span class="text-extra-small align-middle">FLAT</span>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+            </div> <!-- end slimscroll-menu-->
         </div>
-      </div>
-    </div>
+        <!-- /Right-bar -->
 
-    <button type="button" class="btn settings-button btn-gradient-primary" data-bs-toggle="modal" data-bs-target="#settings" id="settingsButton">
-      <i data-cs-icon="paint-roller" class="position-relative"></i>
-    </button>
-    <!-- Theme Settings Modal End -->
+        <!-- Right bar overlay-->
+        <div class="rightbar-overlay"></div>
 
-    <!-- Search Modal Start -->
-    <div class="modal fade modal-under-nav modal-search modal-close-out" id="searchPagesModal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header border-0 p-0">
-            <button type="button" class="btn-close btn btn-icon btn-icon-only btn-foreground" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body ps-5 pe-5 pb-0 border-0">
-            <input id="searchPagesInput" class="form-control form-control-xl borderless ps-0 pe-0 mb-1 auto-complete" type="text" autocomplete="off" />
-          </div>
-          <div class="modal-footer border-top justify-content-start ps-5 pe-5 pb-3 pt-3 border-0">
-            <span class="text-alternate d-inline-block m-0 me-3">
-              <i data-cs-icon="arrow-bottom" data-cs-size="15" class="text-alternate align-middle me-1"></i>
-              <span class="align-middle text-medium">Navigate</span>
-            </span>
-            <span class="text-alternate d-inline-block m-0 me-3">
-              <i data-cs-icon="arrow-bottom-left" data-cs-size="15" class="text-alternate align-middle me-1"></i>
-              <span class="align-middle text-medium">Select</span>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Search Modal End -->
+        <!-- JAVASCRIPT -->
+        <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/metismenu/metisMenu.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/node-waves/waves.min.js') }}"></script>
 
-    <!-- Vendor Scripts Start -->
-    <script src="{{ asset('js/vendor/jquery-3.5.1.min.js') }}"></script>
-    <script src="{{ asset('js/vendor/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('js/vendor/OverlayScrollbars.min.js') }}"></script>
-    <script src="{{ asset('js/vendor/autoComplete.min.js') }}"></script>
-    <script src="{{ asset('js/vendor/clamp.min.js') }}"></script>
-    <script src="{{ asset('js/vendor/jquery.barrating.min.js') }}"></script>
-    <!-- Vendor Scripts End -->
+        <!-- apexcharts -->
+        <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
-    <!-- Template Base Scripts Start -->
-    <script src="{{ asset('font/CS-Line/csicons.min.js') }}"></script>
-    <script src="{{ asset('js/base/helpers.js') }}"></script>
-    <script src="{{ asset('js/base/globals.js') }}"></script>
-    <script src="{{ asset('js/base/nav.js') }}"></script>
-    <script src="{{ asset('js/base/search.js') }}"></script>
-    <script src="{{ asset('js/base/settings.js') }}"></script>
-    <script src="{{ asset('js/base/init.js') }}"></script>
-    <!-- Template Base Scripts End -->
-    <!-- Page Specific Scripts Start -->
-    <script src="{{ asset('js/pages/dashboard.visual.js') }}"></script>
-    <script src="{{ asset('js/common.js') }}"></script>
-    <script src="{{ asset('js/scripts.js') }}"></script>
-    <!-- Page Specific Scripts End -->
-  </body>
+        <!-- jquery.vectormap map -->
+        <script src="{{ asset('assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js') }}"></script>
+
+        <!-- Required datatable js -->
+        <script src="{{ asset('assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+        
+        <!-- Responsive examples -->
+        <script src="{{ asset('assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js') }}"></script>
+        <script src="{{ asset('assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js') }}"></script>
+
+        <script src="{{ asset('assets/js/pages/dashboard.init.js') }}"></script>
+
+        <script src="{{ asset('assets/js/app.js') }}"></script>
+
+    </body>
 </html>
