@@ -6,25 +6,25 @@
   <div class="dropdown-menu dropdown-menu-end user-menu wide">
     <div class="row mb-3 ms-0 me-0">
       <div class="col-12 ps-1 mb-2">
-        <div class="text-extra-small text-primary">ACCOUNT</div>
+        <div class="text-extra-small text-primary">COMPTE</div>
       </div>
       <div class="col-6 ps-1 pe-1">
         <ul class="list-unstyled">
           <li>
-            <a href="#">User Info</a>
+            <a href="#">Informations utilisateur</a>
           </li>
           <li>
-            <a href="#">Preferences</a>
+            <a href="#">Préférences</a>
           </li>
           <li>
-            <a href="#">Calendar</a>
+            <a href="#">Calendrier</a>
           </li>
         </ul>
       </div>
       <div class="col-6 pe-1 ps-1">
         <ul class="list-unstyled">
           <li>
-            <a href="#">Security</a>
+            <a href="#">Sécurité</a>
           </li>
           <li>
             <a href="#">Billing</a>
@@ -82,14 +82,19 @@
           <li>
             <a href="#">
               <i data-cs-icon="gear" class="me-2" data-cs-size="17"></i>
-              <span class="align-middle">Settings</span>
+              <span class="align-middle">{{ __('Réglages') }}</span>
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
               <i data-cs-icon="logout" class="me-2" data-cs-size="17"></i>
-              <span class="align-middle">Logout</span>
+              <span class="align-middle">{{ __('Se déconnecter') }}</span>
             </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>            
           </li>
         </ul>
       </div>
