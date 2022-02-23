@@ -2739,12 +2739,12 @@ div.dt-button-info {
   background-color: #fff; }
 
 .authentication-bg {
-  background-image: url("../images/authentication-bg.jpg");
+  background-image: url("../images/login.jpg");
   height: 100vh;
   background-size: cover;
   background-position: center; }
   .authentication-bg .bg-overlay {
-    background-color: #292626; }
+    background-color: black; }
   @media (max-width: 991px) {
     .authentication-bg {
       display: none; } }
