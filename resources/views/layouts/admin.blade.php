@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-footer="true">
+<html lang="en" data-footer="true" data-placement="horizontal" data-behaviour="pinned" data-layout="fluid" data-radius="rounded" data-color="light-pink" data-navcolor="default" data-show="true" data-dimension="desktop">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
