@@ -2,7 +2,7 @@
 <html lang="en">
 
     <head>
-        
+
         <meta charset="utf-8" />
         <title>Login | Nazox - Responsive Bootstrap 4 Admin Dashboard</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +37,7 @@
                                                 <div>
                                                     <a href="index.html" class="logo"><img src="assets/images/logo-dark.png" height="20" alt="logo"></a>
                                                 </div>
-    
+
                                                 <h4 class="font-size-18 mt-4">Content de te revoir !</h4>
                                                 <p class="text-muted">Connectez-vous pour continuer vers Nazox.</p>
                                             </div>
@@ -48,25 +48,25 @@
                                                     <div class="form-group auth-form-group-custom mb-4">
                                                         <i class="ri-user-2-line auti-custom-input-icon"></i>
                                                         <label for="username">Email</label>
-                                                        <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" id="username" placeholder="Entrer email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                                                                        @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                                        <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" id="username" placeholder="Entrer email" value="{{ old('email') }}" autocomplete="email" autofocus>
+                                                        @error('email')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                        @enderror
                                                     </div>
-                            
+
                                                     <div class="form-group auth-form-group-custom mb-4">
                                                         <i class="ri-lock-2-line auti-custom-input-icon"></i>
                                                         <label for="userpassword">Mot de passe</label>
-                                                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Mot de passe">
-                                                                                        @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="current-password" placeholder="Mot de passe">
+                                                        @error('password')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                        @enderror
                                                     </div>
-                            
+
                                                     <div class="custom-control custom-checkbox">
                                                         <input type="checkbox" class="custom-control-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                                         <label class="custom-control-label" for="customControlInline">Souviens-toi de moi</label>
@@ -104,7 +104,7 @@
             </div>
         </div>
 
-        
+
 
         <!-- JAVASCRIPT -->
         <script src="{{ asset('assets/libs/jquery/jquery.min.js') }}"></script>
